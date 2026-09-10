@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f3f6f9;
+    color: #173f73;
+}
+
+
+/* HEADER */
+
+.header {
+    background: white;
+    min-height: 125px;
+    display: flex;
+    align-items: center;
+    padding: 20px 7%;
+    border-bottom: 1px solid #dce5ef;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 32%;
+}
+
+.logo {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #174d8b, #267bd1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.logo-area strong {
+    display: block;
+    font-size: 25px;
+}
+
+.logo-area span {
+    display: block;
+    font-size: 11px;
+    color: #60758e;
+}
+
+.title-area {
+    border-left: 1px solid #d9e2ec;
+    padding-left: 30px;
+}
+
+.title-area h1 {
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+
+/* MENU */
+
+.menu {
+    background: white;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #dce5ef;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #174d8b;
+    padding: 18px 22px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.menu a:hover,
+.menu .active {
+    background: #1674cc;
+    color: white;
+}
+
+
+/* MAIN */
+
+main {
+    width: 90%;
+    max-width: 1150px;
+    margin: 30px auto;
+}
+
+.breadcrumb {
+    font-size: 13px;
+    color: #698099;
+    margin-bottom: 20px;
+}
+
+
+/* INTRO */
+
+.intro {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 5px 20px rgba(30, 70, 110, 0.08);
+    margin-bottom: 20px;
+}
+
+.intro-icon {
+    width: 70px;
+    height: 70px;
+    background: #e5f1ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.intro h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.intro p {
+    color: #60758e;
+}
+
+
+/* GAME */
+
+.game-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 8px 30px rgba(30, 70, 110, 0.1);
+}
+
+.game-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: #2182d8;
+    letter-spacing: 1px;
+}
+
+.game-top h2 {
+    margin-top: 8px;
+    font-size: 24px;
+}
+
+.score {
+    background: #edf6ff;
+    border-radius: 12px;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.score strong {
+    display: block;
+    font-size: 25px;
+    color: #1674cc;
+}
+
+
+/* PROGRESS */
+
+.progress-area {
+    margin: 30px 0;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.progress {
+    height: 9px;
+    background: #e4ebf2;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 20%;
+    background: #1674cc;
+    transition: 0.4s;
+}
+
+
+/* QUESTION */
+
+.scenario {
+    background: #f5f9fd;
+    border: 1px solid #dce8f3;
+    border-radius: 15px;
+    padding: 28px;
+}
+
+.scenario-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: #1674cc;
+}
+
+.scenario h3 {
+    margin-top: 12px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #173f73;
+}
+
+
+/* ANSWERS */
+
+.answers {
+    display: grid;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.answer {
+    width: 100%;
+    background: white;
+    border: 2px solid #dce5ef;
+    border-radius: 12px;
+    padding: 17px;
+    text-align: left;
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    color: #244b72;
+    transition: 0.2s;
+}
+
+.answer:hover {
+    border-color: #1674cc;
+    background: #f4f9ff;
+}
+
+.answer.correct {
+    border-color: #1b9b63;
+    background: #e9f8f0;
+}
+
+.answer.wrong {
+    border-color: #d9534f;
+    background: #fff0ef;
+}
+
+
+/* FEEDBACK */
+
+.feedback {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 12px;
+    display: none;
+    line-height: 1.5;
+}
+
+.feedback.show {
+    display: block;
+}
+
+.feedback.correct {
+    background: #eaf8f1;
+    color: #176d49;
+}
+
+.feedback.wrong {
+    background: #fff0ef;
+    color: #9c302c;
+}
+
+
+/* BUTTON */
+
+.next-button,
+.restart-button {
+    margin-top: 20px;
+    border: none;
+    background: #1674cc;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.next-button:hover,
+.restart-button:hover {
+    background: #0e5da8;
+}
+
+
+/* RESULT */
+
+.result {
+    text-align: center;
+    padding: 35px 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.result-icon {
+    font-size: 65px;
+}
+
+.result h2 {
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.final-score {
+    margin: 20px;
+}
+
+.final-score strong {
+    font-size: 55px;
+    color: #1674cc;
+}
+
+.final-score span {
+    display: block;
+    color: #6b7e92;
+}
+
+.result-text {
+    color: #687c91;
+}
+
+
+/* TIP */
+
+.tip {
+    margin-top: 20px;
+    background: #e8f3ff;
+    border: 1px solid #cce3f9;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.tip-icon {
+    font-size: 30px;
+}
+
+.tip strong {
+    color: #1674cc;
+    font-size: 13px;
+}
+
+.tip p {
+    margin-top: 5px;
+    color: #45627e;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 50px;
+    background: #123c6c;
+    color: white;
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+footer strong {
+    display: block;
+    font-size: 18px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .logo-area {
+        width: 100%;
+    }
+
+    .title-area {
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .title-area h1 {
+        font-size: 19px;
+    }
+
+    .menu {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .menu a {
+        white-space: nowrap;
+        padding: 15px;
+    }
+
+    .game-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
