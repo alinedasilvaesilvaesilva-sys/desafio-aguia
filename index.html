@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Desafio Águia | CAO Criminal MPMA</title>
+    <title>Central de Orientação — CAO Criminal MPMA</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,7 +14,7 @@
 <header class="header">
 
     <div class="logo-area">
-        <div class="logo">⚖️</div>
+        <div class="logo">⚖</div>
 
         <div>
             <strong>MPMA</strong>
@@ -26,9 +22,9 @@
         </div>
     </div>
 
-    <div class="title-area">
+    <div class="header-title">
         <h1>Central de Orientação sobre<br>
-            Crimes Digitais e Transparência</h1>
+        Crimes Digitais e Transparência</h1>
     </div>
 
 </header>
@@ -36,359 +32,794 @@
 
 <nav class="menu">
 
-    <a href="#">⌂ Início</a>
-    <a href="#">Sobre o CAO Criminal</a>
-    <a href="#" class="active">Projetos</a>
-    <a href="#">Orientações</a>
-    <a href="#">Estatísticas</a>
-    <a href="#">Notícias</a>
-    <a href="#">Fale Conosco</a>
+    <button onclick="showPage('inicio')">🏠 Início</button>
+
+    <button onclick="showPage('sobre')">🏛️ Sobre o CAO</button>
+
+    <button onclick="showPage('projetos')">📁 Projetos</button>
+
+    <button onclick="showPage('orientacoes')">🛡️ Orientações</button>
+
+    <button onclick="showPage('estatisticas')">📊 Estatísticas</button>
+
+    <button onclick="showPage('noticias')">📰 Notícias</button>
+
+    <button onclick="showPage('contato')">📞 Fale Conosco</button>
 
 </nav>
 
 
 <main>
 
-    <div class="breadcrumb">
-        Início › Projetos › CAO Criminal MPMA › Desafio Águia
+
+<!-- ================= INÍCIO ================= -->
+
+<section id="inicio" class="page active">
+
+    <div class="hero">
+
+        <div>
+
+            <span class="tag">CAO CRIMINAL • MPMA</span>
+
+            <h2>
+                Informação também é proteção.
+            </h2>
+
+            <p>
+                Um espaço digital para orientar cidadãos,
+                apresentar informações e promover educação
+                sobre segurança no ambiente digital.
+            </p>
+
+            <button class="primary-button"
+                    onclick="showPage('projetos')">
+                🎮 Conheça o Desafio Águia
+            </button>
+
+        </div>
+
+        <div class="hero-icon">
+            🛡️
+        </div>
+
     </div>
 
 
-    <section class="intro">
+    <div class="cards">
 
-        <div class="intro-icon">🛡️</div>
+        <div class="card clickable"
+             onclick="showPage('orientacoes')">
+
+            <div class="card-icon">🛡️</div>
+
+            <h3>Guia do Cidadão</h3>
+
+            <p>
+                Orientações simples para reconhecer
+                situações de risco no ambiente digital.
+            </p>
+
+            <span>Ver orientações →</span>
+
+        </div>
+
+
+        <div class="card clickable"
+             onclick="showPage('estatisticas')">
+
+            <div class="card-icon">📊</div>
+
+            <h3>Painel de Transparência</h3>
+
+            <p>
+                Visualização demonstrativa de indicadores
+                relacionados à atuação criminal.
+            </p>
+
+            <span>Ver painel →</span>
+
+        </div>
+
+
+        <div class="card clickable"
+             onclick="showPage('projetos')">
+
+            <div class="card-icon">🎮</div>
+
+            <h3>Desafio Águia</h3>
+
+            <p>
+                Teste seus conhecimentos sobre golpes
+                digitais em um jogo educativo.
+            </p>
+
+            <span>Jogar agora →</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="restricted">
 
         <div>
+            <small>ACESSO INTERNO</small>
+
+            <h3>🔐 Área Restrita — Catálogo Águia</h3>
+
+            <p>
+                Ambiente demonstrativo de acesso interno.
+            </p>
+        </div>
+
+        <button onclick="showPage('restrita')">
+            Acessar área restrita →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SOBRE ================= -->
+
+<section id="sobre" class="page">
+
+    <div class="section-title">
+
+        <span>CAO CRIMINAL</span>
+
+        <h2>Sobre o projeto</h2>
+
+        <p>
+            Esta área apresenta a proposta do portal
+            e seus objetivos.
+        </p>
+
+    </div>
+
+
+    <div class="content-box">
+
+        <h3>🎯 Objetivo</h3>
+
+        <p>
+            O portal foi pensado como uma plataforma
+            digital de orientação e educação, aproximando
+            informações sobre crimes digitais do cidadão
+            de forma simples e acessível.
+        </p>
+
+        <h3>💻 Tecnologia</h3>
+
+        <p>
+            O projeto utiliza uma interface web responsiva,
+            com navegação interativa e ferramentas
+            educativas.
+        </p>
+
+        <h3>🛡️ Educação digital</h3>
+
+        <p>
+            O objetivo do Guia do Cidadão e do Desafio Águia
+            é estimular atitudes mais seguras no uso da
+            internet.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROJETOS ================= -->
+
+<section id="projetos" class="page">
+
+    <div class="section-title">
+
+        <span>PROJETOS</span>
+
+        <h2>Projetos do CAO Criminal</h2>
+
+        <p>
+            Conheça as iniciativas disponíveis no portal.
+        </p>
+
+    </div>
+
+
+    <div class="project-card">
+
+        <div class="project-icon">🦅</div>
+
+        <div>
+
+            <span class="tag">PROJETO EDUCATIVO</span>
+
             <h2>Desafio Águia</h2>
 
             <p>
-                Você consegue identificar um golpe digital?
-                Teste seus conhecimentos e aprenda a se proteger.
+                Um jogo educativo em que o cidadão analisa
+                situações do cotidiano e aprende a reconhecer
+                possíveis golpes digitais.
             </p>
+
+            <button class="primary-button"
+                    onclick="startGame()">
+
+                🎮 Começar o desafio
+
+            </button>
+
         </div>
 
-    </section>
+    </div>
 
 
-    <section class="game-card">
+    <div id="game" class="game-area hidden">
 
-        <div class="game-top">
+        <div class="game-header">
 
             <div>
-                <span class="small-title">GUIA DO CIDADÃO</span>
 
-                <h2>
-                    🎮 Desafio: Você consegue identificar o golpe?
-                </h2>
+                <small>DESAFIO ÁGUIA</small>
+
+                <h2>Você consegue identificar o golpe?</h2>
+
             </div>
 
-            <div class="score">
-                Pontos
+            <div class="game-score">
+
+                <span>Pontos</span>
+
                 <strong id="score">0</strong>
+
             </div>
 
         </div>
 
 
-        <div class="progress-area">
+        <div class="progress-info">
 
-            <div class="progress-info">
-                <span id="questionNumber">Pergunta 1 de 5</span>
-                <span id="progressPercent">20%</span>
-            </div>
+            <span id="questionNumber">
+                Pergunta 1 de 5
+            </span>
 
-            <div class="progress">
-                <div id="progressBar"></div>
-            </div>
-
-        </div>
-
-
-        <div id="quiz">
-
-            <div class="scenario">
-
-                <span class="scenario-label">SITUAÇÃO</span>
-
-                <h3 id="question">
-                    Carregando pergunta...
-                </h3>
-
-            </div>
-
-
-            <div id="answers" class="answers"></div>
-
-
-            <div id="feedback" class="feedback"></div>
-
-
-            <button id="nextButton" class="next-button" onclick="nextQuestion()">
-                Próxima pergunta →
-            </button>
+            <span id="percent">
+                20%
+            </span>
 
         </div>
 
 
-        <div id="result" class="result hidden">
+        <div class="progress">
 
-            <div class="result-icon">🏆</div>
-
-            <h2>Desafio concluído!</h2>
-
-            <p>Você fez:</p>
-
-            <div class="final-score">
-                <strong id="finalScore">0</strong>
-                <span>de 5 pontos</span>
-            </div>
-
-            <h3 id="resultMessage"></h3>
-
-            <p class="result-text">
-                Continue atento. Informação também é proteção!
-            </p>
-
-            <button class="restart-button" onclick="restartGame()">
-                🔄 Jogar novamente
-            </button>
+            <div id="progressBar"></div>
 
         </div>
 
-    </section>
+
+        <div class="question-box">
+
+            <small>SITUAÇÃO</small>
+
+            <h3 id="question">
+                Pergunta
+            </h3>
+
+        </div>
 
 
-    <section class="tip">
+        <div id="answers" class="answers"></div>
 
-        <div class="tip-icon">💡</div>
 
-        <div>
-            <strong>LEMBRE-SE</strong>
+        <div id="feedback" class="feedback"></div>
+
+
+        <button id="nextButton"
+                class="primary-button hidden"
+                onclick="nextQuestion()">
+
+            Próxima pergunta →
+
+        </button>
+
+    </div>
+
+
+    <div id="gameResult" class="result hidden">
+
+        <div class="trophy">🏆</div>
+
+        <h2>Desafio concluído!</h2>
+
+        <p>Sua pontuação:</p>
+
+        <strong id="finalScore">0/5</strong>
+
+        <p id="resultMessage"></p>
+
+        <button class="primary-button"
+                onclick="restartGame()">
+
+            🔄 Jogar novamente
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ORIENTAÇÕES ================= -->
+
+<section id="orientacoes" class="page">
+
+    <div class="section-title">
+
+        <span>GUIA DO CIDADÃO</span>
+
+        <h2>Orientações de segurança digital</h2>
+
+        <p>
+            Algumas atitudes simples podem ajudar
+            a evitar situações de risco.
+        </p>
+
+    </div>
+
+
+    <div class="tips-grid">
+
+        <div class="tip-card">
+
+            <div>🔗</div>
+
+            <h3>Cuidado com links</h3>
 
             <p>
-                Nunca forneça senhas, códigos de segurança ou dados pessoais
-                para pessoas desconhecidas.
+                Evite acessar links inesperados recebidos
+                por mensagens ou redes sociais.
             </p>
+
         </div>
 
-    </section>
+
+        <div class="tip-card">
+
+            <div>🔑</div>
+
+            <h3>Proteja suas senhas</h3>
+
+            <p>
+                Não compartilhe senhas ou códigos
+                de segurança com outras pessoas.
+            </p>
+
+        </div>
+
+
+        <div class="tip-card">
+
+            <div>📱</div>
+
+            <h3>Confirme contatos</h3>
+
+            <p>
+                Antes de realizar pagamentos, confirme
+                a identidade de quem está solicitando.
+            </p>
+
+        </div>
+
+
+        <div class="tip-card">
+
+            <div>🛒</div>
+
+            <h3>Compras online</h3>
+
+            <p>
+                Pesquise a empresa e confira informações
+                antes de realizar uma compra.
+            </p>
+
+        </div>
+
+
+        <div class="tip-card">
+
+            <div>💳</div>
+
+            <h3>PIX e pagamentos</h3>
+
+            <p>
+                Confira cuidadosamente os dados
+                antes de confirmar uma transferência.
+            </p>
+
+        </div>
+
+
+        <div class="tip-card">
+
+            <div>🚨</div>
+
+            <h3>Desconfie da urgência</h3>
+
+            <p>
+                Pedidos para agir imediatamente podem
+                ser um sinal de tentativa de golpe.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ESTATÍSTICAS ================= -->
+
+<section id="estatisticas" class="page">
+
+    <div class="section-title">
+
+        <span>TRANSPARÊNCIA</span>
+
+        <h2>Painel de Estatísticas</h2>
+
+        <p>
+            Dados demonstrativos para apresentação
+            da interface do projeto.
+        </p>
+
+    </div>
+
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <span>📋</span>
+
+            <strong>1.284</strong>
+
+            <p>Registros analisados</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>🛡️</span>
+
+            <strong>846</strong>
+
+            <p>Orientações realizadas</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>💻</span>
+
+            <strong>527</strong>
+
+            <p>Casos digitais</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>📈</span>
+
+            <strong>72%</strong>
+
+            <p>Indicador demonstrativo</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="chart-card">
+
+        <h3>Indicadores demonstrativos</h3>
+
+        <div class="bars">
+
+            <div class="bar-item">
+
+                <span>Orientações</span>
+
+                <div class="bar">
+                    <div style="width:85%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="bar-item">
+
+                <span>Atendimentos</span>
+
+                <div class="bar">
+                    <div style="width:68%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="bar-item">
+
+                <span>Casos digitais</span>
+
+                <div class="bar">
+                    <div style="width:55%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="bar-item">
+
+                <span>Ações educativas</span>
+
+                <div class="bar">
+                    <div style="width:76%"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <small>
+            * Os números desta demonstração são fictícios
+            e servem apenas para apresentação do protótipo.
+        </small>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= NOTÍCIAS ================= -->
+
+<section id="noticias" class="page">
+
+    <div class="section-title">
+
+        <span>INFORMAÇÃO</span>
+
+        <h2>Notícias e Informativos</h2>
+
+        <p>
+            Conteúdos educativos e informativos.
+        </p>
+
+    </div>
+
+
+    <div class="news-grid">
+
+        <article class="news">
+
+            <span>EDUCAÇÃO DIGITAL</span>
+
+            <h3>
+                Como reconhecer mensagens suspeitas?
+            </h3>
+
+            <p>
+                Conheça alguns sinais que podem indicar
+                uma tentativa de golpe digital.
+            </p>
+
+            <button onclick="showPage('orientacoes')">
+                Ler orientação →
+            </button>
+
+        </article>
+
+
+        <article class="news">
+
+            <span>SEGURANÇA</span>
+
+            <h3>
+                Proteja suas contas digitais
+            </h3>
+
+            <p>
+                Veja práticas importantes para aumentar
+                a segurança de suas contas.
+            </p>
+
+            <button onclick="showPage('orientacoes')">
+                Saiba mais →
+            </button>
+
+        </article>
+
+
+        <article class="news">
+
+            <span>PROJETO</span>
+
+            <h3>
+                Conheça o Desafio Águia
+            </h3>
+
+            <p>
+                Aprenda brincando a identificar situações
+                de risco no ambiente digital.
+            </p>
+
+            <button onclick="showPage('projetos')">
+                Conhecer projeto →
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTATO ================= -->
+
+<section id="contato" class="page">
+
+    <div class="section-title">
+
+        <span>ATENDIMENTO</span>
+
+        <h2>Fale Conosco</h2>
+
+        <p>
+            Envie uma mensagem pelo formulário abaixo.
+        </p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <form onsubmit="sendMessage(event)">
+
+            <label>Nome</label>
+
+            <input
+                id="name"
+                type="text"
+                placeholder="Digite seu nome"
+                required
+            >
+
+
+            <label>E-mail</label>
+
+            <input
+                id="email"
+                type="email"
+                placeholder="Digite seu e-mail"
+                required
+            >
+
+
+            <label>Assunto</label>
+
+            <select id="subject">
+
+                <option>Orientação</option>
+                <option>Projeto</option>
+                <option>Informação</option>
+                <option>Outro</option>
+
+            </select>
+
+
+            <label>Mensagem</label>
+
+            <textarea
+                id="message"
+                rows="6"
+                placeholder="Digite sua mensagem"
+                required
+            ></textarea>
+
+
+            <button class="primary-button">
+                📩 Enviar mensagem
+            </button>
+
+        </form>
+
+
+        <div id="formMessage" class="form-message"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ÁREA RESTRITA ================= -->
+
+<section id="restrita" class="page">
+
+    <div class="restricted-page">
+
+        <div class="lock">🔐</div>
+
+        <h2>Área Restrita</h2>
+
+        <p>
+            Catálogo Águia — Acesso Interno
+        </p>
+
+        <div class="login-box">
+
+            <label>Usuário</label>
+
+            <input id="user"
+                   type="text"
+                   placeholder="Usuário">
+
+
+            <label>Senha</label>
+
+            <input id="password"
+                   type="password"
+                   placeholder="Senha">
+
+
+            <button class="primary-button"
+                    onclick="login()">
+
+                Entrar
+
+            </button>
+
+            <div id="loginMessage"></div>
+
+        </div>
+
+        <small>
+            Demonstração de interface.
+            Este acesso não possui autenticação real.
+        </small>
+
+    </div>
+
+</section>
+
 
 </main>
 
 
-<footer>
-
-    <div>
-        <strong>MPMA</strong>
-        Ministério Público do Estado do Maranhão
-    </div>
-
-    <div>
-        CAO Criminal • Orientação ao cidadão
-    </div>
-
-    <div>
-        Acessibilidade • Privacidade • Termos de Uso
-    </div>
-
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Desafio Águia | CAO Criminal MPMA</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-<header class="header">
-
-    <div class="logo-area">
-        <div class="logo">⚖️</div>
-
-        <div>
-            <strong>MPMA</strong>
-            <span>Ministério Público do Estado do Maranhão</span>
-        </div>
-    </div>
-
-    <div class="title-area">
-        <h1>Central de Orientação sobre<br>
-            Crimes Digitais e Transparência</h1>
-    </div>
-
-</header>
-
-
-<nav class="menu">
-
-    <a href="#">⌂ Início</a>
-    <a href="#">Sobre o CAO Criminal</a>
-    <a href="#" class="active">Projetos</a>
-    <a href="#">Orientações</a>
-    <a href="#">Estatísticas</a>
-    <a href="#">Notícias</a>
-    <a href="#">Fale Conosco</a>
-
-</nav>
-
-
-<main>
-
-    <div class="breadcrumb">
-        Início › Projetos › CAO Criminal MPMA › Desafio Águia
-    </div>
-
-
-    <section class="intro">
-
-        <div class="intro-icon">🛡️</div>
-
-        <div>
-            <h2>Desafio Águia</h2>
-
-            <p>
-                Você consegue identificar um golpe digital?
-                Teste seus conhecimentos e aprenda a se proteger.
-            </p>
-        </div>
-
-    </section>
-
-
-    <section class="game-card">
-
-        <div class="game-top">
-
-            <div>
-                <span class="small-title">GUIA DO CIDADÃO</span>
-
-                <h2>
-                    🎮 Desafio: Você consegue identificar o golpe?
-                </h2>
-            </div>
-
-            <div class="score">
-                Pontos
-                <strong id="score">0</strong>
-            </div>
-
-        </div>
-
-
-        <div class="progress-area">
-
-            <div class="progress-info">
-                <span id="questionNumber">Pergunta 1 de 5</span>
-                <span id="progressPercent">20%</span>
-            </div>
-
-            <div class="progress">
-                <div id="progressBar"></div>
-            </div>
-
-        </div>
-
-
-        <div id="quiz">
-
-            <div class="scenario">
-
-                <span class="scenario-label">SITUAÇÃO</span>
-
-                <h3 id="question">
-                    Carregando pergunta...
-                </h3>
-
-            </div>
-
-
-            <div id="answers" class="answers"></div>
-
-
-            <div id="feedback" class="feedback"></div>
-
-
-            <button id="nextButton" class="next-button" onclick="nextQuestion()">
-                Próxima pergunta →
-            </button>
-
-        </div>
-
-
-        <div id="result" class="result hidden">
-
-            <div class="result-icon">🏆</div>
-
-            <h2>Desafio concluído!</h2>
-
-            <p>Você fez:</p>
-
-            <div class="final-score">
-                <strong id="finalScore">0</strong>
-                <span>de 5 pontos</span>
-            </div>
-
-            <h3 id="resultMessage"></h3>
-
-            <p class="result-text">
-                Continue atento. Informação também é proteção!
-            </p>
-
-            <button class="restart-button" onclick="restartGame()">
-                🔄 Jogar novamente
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <section class="tip">
-
-        <div class="tip-icon">💡</div>
-
-        <div>
-            <strong>LEMBRE-SE</strong>
-
-            <p>
-                Nunca forneça senhas, códigos de segurança ou dados pessoais
-                para pessoas desconhecidas.
-            </p>
-        </div>
-
-    </section>
-
-</main>
-
 
 <footer>
 
-    <div>
-        <strong>MPMA</strong>
-        Ministério Público do Estado do Maranhão
-    </div>
+    <strong>MPMA</strong>
 
-    <div>
-        CAO Criminal • Orientação ao cidadão
-    </div>
+    <span>
+        Central de Orientação sobre Crimes Digitais
+    </span>
 
-    <div>
-        Acessibilidade • Privacidade • Termos de Uso
-    </div>
+    <span>
+        Projeto demonstrativo
+    </span>
 
 </footer>
 
