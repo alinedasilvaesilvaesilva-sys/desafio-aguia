@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafio Águia | CAO Criminal MPMA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo-area">
+        <div class="logo">⚖️</div>
+
+        <div>
+            <strong>MPMA</strong>
+            <span>Ministério Público do Estado do Maranhão</span>
+        </div>
+    </div>
+
+    <div class="title-area">
+        <h1>Central de Orientação sobre<br>
+            Crimes Digitais e Transparência</h1>
+    </div>
+
+</header>
+
+
+<nav class="menu">
+
+    <a href="#">⌂ Início</a>
+    <a href="#">Sobre o CAO Criminal</a>
+    <a href="#" class="active">Projetos</a>
+    <a href="#">Orientações</a>
+    <a href="#">Estatísticas</a>
+    <a href="#">Notícias</a>
+    <a href="#">Fale Conosco</a>
+
+</nav>
+
+
+<main>
+
+    <div class="breadcrumb">
+        Início › Projetos › CAO Criminal MPMA › Desafio Águia
+    </div>
+
+
+    <section class="intro">
+
+        <div class="intro-icon">🛡️</div>
+
+        <div>
+            <h2>Desafio Águia</h2>
+
+            <p>
+                Você consegue identificar um golpe digital?
+                Teste seus conhecimentos e aprenda a se proteger.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="game-card">
+
+        <div class="game-top">
+
+            <div>
+                <span class="small-title">GUIA DO CIDADÃO</span>
+
+                <h2>
+                    🎮 Desafio: Você consegue identificar o golpe?
+                </h2>
+            </div>
+
+            <div class="score">
+                Pontos
+                <strong id="score">0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="progress-area">
+
+            <div class="progress-info">
+                <span id="questionNumber">Pergunta 1 de 5</span>
+                <span id="progressPercent">20%</span>
+            </div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+        </div>
+
+
+        <div id="quiz">
+
+            <div class="scenario">
+
+                <span class="scenario-label">SITUAÇÃO</span>
+
+                <h3 id="question">
+                    Carregando pergunta...
+                </h3>
+
+            </div>
+
+
+            <div id="answers" class="answers"></div>
+
+
+            <div id="feedback" class="feedback"></div>
+
+
+            <button id="nextButton" class="next-button" onclick="nextQuestion()">
+                Próxima pergunta →
+            </button>
+
+        </div>
+
+
+        <div id="result" class="result hidden">
+
+            <div class="result-icon">🏆</div>
+
+            <h2>Desafio concluído!</h2>
+
+            <p>Você fez:</p>
+
+            <div class="final-score">
+                <strong id="finalScore">0</strong>
+                <span>de 5 pontos</span>
+            </div>
+
+            <h3 id="resultMessage"></h3>
+
+            <p class="result-text">
+                Continue atento. Informação também é proteção!
+            </p>
+
+            <button class="restart-button" onclick="restartGame()">
+                🔄 Jogar novamente
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="tip">
+
+        <div class="tip-icon">💡</div>
+
+        <div>
+            <strong>LEMBRE-SE</strong>
+
+            <p>
+                Nunca forneça senhas, códigos de segurança ou dados pessoais
+                para pessoas desconhecidas.
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <strong>MPMA</strong>
+        Ministério Público do Estado do Maranhão
+    </div>
+
+    <div>
+        CAO Criminal • Orientação ao cidadão
+    </div>
+
+    <div>
+        Acessibilidade • Privacidade • Termos de Uso
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafio Águia | CAO Criminal MPMA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo-area">
+        <div class="logo">⚖️</div>
+
+        <div>
+            <strong>MPMA</strong>
+            <span>Ministério Público do Estado do Maranhão</span>
+        </div>
+    </div>
+
+    <div class="title-area">
+        <h1>Central de Orientação sobre<br>
+            Crimes Digitais e Transparência</h1>
+    </div>
+
+</header>
+
+
+<nav class="menu">
+
+    <a href="#">⌂ Início</a>
+    <a href="#">Sobre o CAO Criminal</a>
+    <a href="#" class="active">Projetos</a>
+    <a href="#">Orientações</a>
+    <a href="#">Estatísticas</a>
+    <a href="#">Notícias</a>
+    <a href="#">Fale Conosco</a>
+
+</nav>
+
+
+<main>
+
+    <div class="breadcrumb">
+        Início › Projetos › CAO Criminal MPMA › Desafio Águia
+    </div>
+
+
+    <section class="intro">
+
+        <div class="intro-icon">🛡️</div>
+
+        <div>
+            <h2>Desafio Águia</h2>
+
+            <p>
+                Você consegue identificar um golpe digital?
+                Teste seus conhecimentos e aprenda a se proteger.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="game-card">
+
+        <div class="game-top">
+
+            <div>
+                <span class="small-title">GUIA DO CIDADÃO</span>
+
+                <h2>
+                    🎮 Desafio: Você consegue identificar o golpe?
+                </h2>
+            </div>
+
+            <div class="score">
+                Pontos
+                <strong id="score">0</strong>
+            </div>
+
+        </div>
+
+
+        <div class="progress-area">
+
+            <div class="progress-info">
+                <span id="questionNumber">Pergunta 1 de 5</span>
+                <span id="progressPercent">20%</span>
+            </div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+        </div>
+
+
+        <div id="quiz">
+
+            <div class="scenario">
+
+                <span class="scenario-label">SITUAÇÃO</span>
+
+                <h3 id="question">
+                    Carregando pergunta...
+                </h3>
+
+            </div>
+
+
+            <div id="answers" class="answers"></div>
+
+
+            <div id="feedback" class="feedback"></div>
+
+
+            <button id="nextButton" class="next-button" onclick="nextQuestion()">
+                Próxima pergunta →
+            </button>
+
+        </div>
+
+
+        <div id="result" class="result hidden">
+
+            <div class="result-icon">🏆</div>
+
+            <h2>Desafio concluído!</h2>
+
+            <p>Você fez:</p>
+
+            <div class="final-score">
+                <strong id="finalScore">0</strong>
+                <span>de 5 pontos</span>
+            </div>
+
+            <h3 id="resultMessage"></h3>
+
+            <p class="result-text">
+                Continue atento. Informação também é proteção!
+            </p>
+
+            <button class="restart-button" onclick="restartGame()">
+                🔄 Jogar novamente
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="tip">
+
+        <div class="tip-icon">💡</div>
+
+        <div>
+            <strong>LEMBRE-SE</strong>
+
+            <p>
+                Nunca forneça senhas, códigos de segurança ou dados pessoais
+                para pessoas desconhecidas.
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <strong>MPMA</strong>
+        Ministério Público do Estado do Maranhão
+    </div>
+
+    <div>
+        CAO Criminal • Orientação ao cidadão
+    </div>
+
+    <div>
+        Acessibilidade • Privacidade • Termos de Uso
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
