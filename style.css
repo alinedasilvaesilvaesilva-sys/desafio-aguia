@@ -1,444 +1,397 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* =========================
+   NAVEGAÇÃO DO PORTAL
+========================= */
 
-body {
-    font-family: "Inter", sans-serif;
-    background: #f3f6f9;
-    color: #173f73;
-}
+function showPage(pageId) {
 
+    const pages = document.querySelectorAll(".page");
 
-/* HEADER */
+    pages.forEach(page => {
+        page.classList.remove("active");
+    });
 
-.header {
-    background: white;
-    min-height: 125px;
-    display: flex;
-    align-items: center;
-    padding: 20px 7%;
-    border-bottom: 1px solid #dce5ef;
-}
+    const selectedPage = document.getElementById(pageId);
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    width: 32%;
-}
-
-.logo {
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #174d8b, #267bd1);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-}
-
-.logo-area strong {
-    display: block;
-    font-size: 25px;
-}
-
-.logo-area span {
-    display: block;
-    font-size: 11px;
-    color: #60758e;
-}
-
-.title-area {
-    border-left: 1px solid #d9e2ec;
-    padding-left: 30px;
-}
-
-.title-area h1 {
-    font-size: 24px;
-    line-height: 1.2;
-}
-
-
-/* MENU */
-
-.menu {
-    background: white;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #dce5ef;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #174d8b;
-    padding: 18px 22px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.menu a:hover,
-.menu .active {
-    background: #1674cc;
-    color: white;
-}
-
-
-/* MAIN */
-
-main {
-    width: 90%;
-    max-width: 1150px;
-    margin: 30px auto;
-}
-
-.breadcrumb {
-    font-size: 13px;
-    color: #698099;
-    margin-bottom: 20px;
-}
-
-
-/* INTRO */
-
-.intro {
-    background: white;
-    border-radius: 18px;
-    padding: 28px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    box-shadow: 0 5px 20px rgba(30, 70, 110, 0.08);
-    margin-bottom: 20px;
-}
-
-.intro-icon {
-    width: 70px;
-    height: 70px;
-    background: #e5f1ff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 35px;
-}
-
-.intro h2 {
-    font-size: 28px;
-    margin-bottom: 8px;
-}
-
-.intro p {
-    color: #60758e;
-}
-
-
-/* GAME */
-
-.game-card {
-    background: white;
-    border-radius: 20px;
-    padding: 35px;
-    box-shadow: 0 8px 30px rgba(30, 70, 110, 0.1);
-}
-
-.game-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.small-title {
-    font-size: 12px;
-    font-weight: 800;
-    color: #2182d8;
-    letter-spacing: 1px;
-}
-
-.game-top h2 {
-    margin-top: 8px;
-    font-size: 24px;
-}
-
-.score {
-    background: #edf6ff;
-    border-radius: 12px;
-    padding: 12px 20px;
-    text-align: center;
-    font-size: 12px;
-}
-
-.score strong {
-    display: block;
-    font-size: 25px;
-    color: #1674cc;
-}
-
-
-/* PROGRESS */
-
-.progress-area {
-    margin: 30px 0;
-}
-
-.progress-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    margin-bottom: 8px;
-}
-
-.progress {
-    height: 9px;
-    background: #e4ebf2;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-#progressBar {
-    height: 100%;
-    width: 20%;
-    background: #1674cc;
-    transition: 0.4s;
-}
-
-
-/* QUESTION */
-
-.scenario {
-    background: #f5f9fd;
-    border: 1px solid #dce8f3;
-    border-radius: 15px;
-    padding: 28px;
-}
-
-.scenario-label {
-    font-size: 11px;
-    font-weight: 800;
-    color: #1674cc;
-}
-
-.scenario h3 {
-    margin-top: 12px;
-    font-size: 20px;
-    line-height: 1.5;
-    color: #173f73;
-}
-
-
-/* ANSWERS */
-
-.answers {
-    display: grid;
-    gap: 14px;
-    margin-top: 22px;
-}
-
-.answer {
-    width: 100%;
-    background: white;
-    border: 2px solid #dce5ef;
-    border-radius: 12px;
-    padding: 17px;
-    text-align: left;
-    font-size: 15px;
-    font-family: inherit;
-    cursor: pointer;
-    color: #244b72;
-    transition: 0.2s;
-}
-
-.answer:hover {
-    border-color: #1674cc;
-    background: #f4f9ff;
-}
-
-.answer.correct {
-    border-color: #1b9b63;
-    background: #e9f8f0;
-}
-
-.answer.wrong {
-    border-color: #d9534f;
-    background: #fff0ef;
-}
-
-
-/* FEEDBACK */
-
-.feedback {
-    margin-top: 18px;
-    padding: 18px;
-    border-radius: 12px;
-    display: none;
-    line-height: 1.5;
-}
-
-.feedback.show {
-    display: block;
-}
-
-.feedback.correct {
-    background: #eaf8f1;
-    color: #176d49;
-}
-
-.feedback.wrong {
-    background: #fff0ef;
-    color: #9c302c;
-}
-
-
-/* BUTTON */
-
-.next-button,
-.restart-button {
-    margin-top: 20px;
-    border: none;
-    background: #1674cc;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.next-button:hover,
-.restart-button:hover {
-    background: #0e5da8;
-}
-
-
-/* RESULT */
-
-.result {
-    text-align: center;
-    padding: 35px 10px;
-}
-
-.hidden {
-    display: none;
-}
-
-.result-icon {
-    font-size: 65px;
-}
-
-.result h2 {
-    font-size: 30px;
-    margin: 12px 0;
-}
-
-.final-score {
-    margin: 20px;
-}
-
-.final-score strong {
-    font-size: 55px;
-    color: #1674cc;
-}
-
-.final-score span {
-    display: block;
-    color: #6b7e92;
-}
-
-.result-text {
-    color: #687c91;
-}
-
-
-/* TIP */
-
-.tip {
-    margin-top: 20px;
-    background: #e8f3ff;
-    border: 1px solid #cce3f9;
-    border-radius: 15px;
-    padding: 20px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.tip-icon {
-    font-size: 30px;
-}
-
-.tip strong {
-    color: #1674cc;
-    font-size: 13px;
-}
-
-.tip p {
-    margin-top: 5px;
-    color: #45627e;
-}
-
-
-/* FOOTER */
-
-footer {
-    margin-top: 50px;
-    background: #123c6c;
-    color: white;
-    padding: 30px 7%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-}
-
-footer strong {
-    display: block;
-    font-size: 18px;
-}
-
-
-/* CELULAR */
-
-@media (max-width: 800px) {
-
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+    if (selectedPage) {
+        selectedPage.classList.add("active");
     }
 
-    .logo-area {
-        width: 100%;
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+/* =========================
+   JOGO DESAFIO ÁGUIA
+========================= */
+
+const questions = [
+
+    {
+        question:
+        "Você recebe uma mensagem dizendo: “Parabéns! Você ganhou um prêmio. Clique neste link para receber”. O que fazer?",
+
+        answers: [
+            "Clicar imediatamente no link.",
+            "Ignorar e verificar a informação em um canal oficial.",
+            "Enviar meus dados para receber o prêmio."
+        ],
+
+        correct: 1,
+
+        explanation:
+        "Mensagens inesperadas com promessas de prêmios podem ser tentativas de golpe. Verifique a informação antes de clicar."
+    },
+
+
+    {
+        question:
+        "Uma pessoa diz ser do banco e pede o código que chegou no seu celular. Qual atitude é mais segura?",
+
+        answers: [
+            "Informar o código.",
+            "Informar somente uma parte do código.",
+            "Não informar e procurar o banco pelos canais oficiais."
+        ],
+
+        correct: 2,
+
+        explanation:
+        "Códigos de segurança são pessoais. Não compartilhe códigos recebidos por SMS ou aplicativo."
+    },
+
+
+    {
+        question:
+        "Você encontra uma loja online com um preço muito abaixo do normal. O que deve fazer?",
+
+        answers: [
+            "Comprar rapidamente.",
+            "Pesquisar a loja e verificar sua reputação antes da compra.",
+            "Fazer um PIX imediatamente."
+        ],
+
+        correct: 1,
+
+        explanation:
+        "Pesquise a empresa e confira os dados antes de comprar. Preços muito baixos podem exigir atenção."
+    },
+
+
+    {
+        question:
+        "Uma pessoa desconhecida envia um QR Code dizendo que você receberá dinheiro. O que fazer?",
+
+        answers: [
+            "Escanear imediatamente.",
+            "Compartilhar com outras pessoas.",
+            "Não escanear e confirmar a informação por um canal oficial."
+        ],
+
+        correct: 2,
+
+        explanation:
+        "QR Codes desconhecidos podem levar a páginas ou pagamentos indevidos. Verifique a origem antes de utilizá-los."
+    },
+
+
+    {
+        question:
+        "Um amigo manda uma mensagem pedindo dinheiro com urgência. Qual é a melhor atitude?",
+
+        answers: [
+            "Transferir imediatamente.",
+            "Confirmar a identidade da pessoa por ligação ou outro meio.",
+            "Enviar o dinheiro e perguntar depois."
+        ],
+
+        correct: 1,
+
+        explanation:
+        "Antes de realizar uma transferência, confirme se realmente é a pessoa que está solicitando."
     }
 
-    .title-area {
-        padding-left: 0;
-        border-left: none;
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+
+function startGame() {
+
+    document.getElementById("game").classList.remove("hidden");
+
+    document.getElementById("gameResult").classList.add("hidden");
+
+    currentQuestion = 0;
+
+    score = 0;
+
+    document.getElementById("score").textContent = "0";
+
+    loadQuestion();
+
+    document.getElementById("game").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+
+function loadQuestion() {
+
+    answered = false;
+
+    const question = questions[currentQuestion];
+
+    document.getElementById("question").textContent =
+        question.question;
+
+    document.getElementById("questionNumber").textContent =
+        `Pergunta ${currentQuestion + 1} de ${questions.length}`;
+
+    const percent =
+        ((currentQuestion + 1) / questions.length) * 100;
+
+    document.getElementById("percent").textContent =
+        percent + "%";
+
+    document.getElementById("progressBar").style.width =
+        percent + "%";
+
+
+    const answers = document.getElementById("answers");
+
+    answers.innerHTML = "";
+
+
+    const feedback =
+        document.getElementById("feedback");
+
+    feedback.className = "feedback";
+
+    feedback.innerHTML = "";
+
+
+    const nextButton =
+        document.getElementById("nextButton");
+
+    nextButton.classList.add("hidden");
+
+
+    question.answers.forEach((answer, index) => {
+
+        const button =
+            document.createElement("button");
+
+        button.className = "answer";
+
+        button.textContent =
+            `${String.fromCharCode(65 + index)} — ${answer}`;
+
+        button.onclick = function() {
+
+            checkAnswer(index, button);
+
+        };
+
+        answers.appendChild(button);
+
+    });
+
+}
+
+
+function checkAnswer(selected, selectedButton) {
+
+    if (answered) return;
+
+    answered = true;
+
+    const question = questions[currentQuestion];
+
+    const buttons =
+        document.querySelectorAll(".answer");
+
+
+    buttons.forEach(button => {
+        button.disabled = true;
+    });
+
+
+    const feedback =
+        document.getElementById("feedback");
+
+
+    if (selected === question.correct) {
+
+        score++;
+
+        document.getElementById("score").textContent =
+            score;
+
+        selectedButton.classList.add("correct");
+
+        feedback.className =
+            "feedback correct";
+
+        feedback.innerHTML =
+            `<strong>✅ Muito bem!</strong><br>${question.explanation}`;
+
+    } else {
+
+        selectedButton.classList.add("wrong");
+
+        buttons[question.correct].classList.add("correct");
+
+        feedback.className =
+            "feedback wrong";
+
+        feedback.innerHTML =
+            `<strong>⚠️ Atenção!</strong><br>${question.explanation}`;
     }
 
-    .title-area h1 {
-        font-size: 19px;
+
+    const nextButton =
+        document.getElementById("nextButton");
+
+    nextButton.classList.remove("hidden");
+
+
+    if (currentQuestion === questions.length - 1) {
+
+        nextButton.textContent =
+            "Ver meu resultado 🏆";
+
+    } else {
+
+        nextButton.textContent =
+            "Próxima pergunta →";
+
     }
 
-    .menu {
-        overflow-x: auto;
-        justify-content: flex-start;
+}
+
+
+function nextQuestion() {
+
+    currentQuestion++;
+
+    if (currentQuestion >= questions.length) {
+
+        showResult();
+
+        return;
     }
 
-    .menu a {
-        white-space: nowrap;
-        padding: 15px;
+    loadQuestion();
+
+}
+
+
+function showResult() {
+
+    document.getElementById("game").classList.add("hidden");
+
+    document.getElementById("gameResult").classList.remove("hidden");
+
+    document.getElementById("finalScore").textContent =
+        `${score}/5`;
+
+
+    const message =
+        document.getElementById("resultMessage");
+
+
+    if (score === 5) {
+
+        message.textContent =
+            "🏆 Excelente! Você demonstrou muita atenção aos sinais de golpes digitais.";
+
+    } else if (score >= 3) {
+
+        message.textContent =
+            "👏 Muito bom! Você já consegue reconhecer vários sinais de alerta.";
+
+    } else {
+
+        message.textContent =
+            "💡 Continue aprendendo. Informação e atenção ajudam na prevenção.";
+
     }
 
-    .game-top {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+}
+
+
+function restartGame() {
+
+    document.getElementById("gameResult").classList.add("hidden");
+
+    document.getElementById("game").classList.remove("hidden");
+
+    currentQuestion = 0;
+
+    score = 0;
+
+    document.getElementById("score").textContent =
+        "0";
+
+    loadQuestion();
+
+}
+
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+function sendMessage(event) {
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const formMessage =
+        document.getElementById("formMessage");
+
+
+    formMessage.textContent =
+        `✅ Obrigado, ${name}! Sua mensagem foi registrada na demonstração.`;
+
+}
+
+
+/* =========================
+   ÁREA RESTRITA
+========================= */
+
+function login() {
+
+    const user =
+        document.getElementById("user").value;
+
+    const password =
+        document.getElementById("password").value;
+
+    const message =
+        document.getElementById("loginMessage");
+
+
+    if (!user || !password) {
+
+        message.innerHTML =
+            "<p style='color:#c43d38;margin-top:15px;'>⚠️ Preencha usuário e senha.</p>";
+
+        return;
     }
 
-    footer {
-        flex-direction: column;
-        gap: 20px;
-    }
+
+    message.innerHTML =
+        "<p style='color:#168254;margin-top:15px;'>✅ Demonstração de acesso realizada.</p>";
+
 }
